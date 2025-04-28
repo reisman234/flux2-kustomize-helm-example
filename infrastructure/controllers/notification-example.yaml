@@ -34,4 +34,4 @@ metadata:
   name: msteams-webhook
   namespace: flux-system
 stringData:
-  address: https://prod-16.westeurope.logic.azure.com:443/workflows/dea8b31fefc44b1b9343958601197a6e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=7_Jyhot1okz1jQaCOCqr3sR0ImFzKqTajrzocGGzGDQ
+  address: https://prod-05.westeurope.logic.azure.com:443/workflows/711b4c99ecd54db59d5140ae0365ad45/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DpbQ0dieGSvBNiASBZ_xIQ3VMy9H5Xo6AowL53IRWQs
