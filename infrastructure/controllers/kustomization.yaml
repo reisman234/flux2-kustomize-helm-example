@@ -4,3 +4,4 @@ resources:
   - cert-manager.yaml
   - ingress-nginx.yaml
   - local-path-provisioner.yaml
+  - notification-example.yaml
