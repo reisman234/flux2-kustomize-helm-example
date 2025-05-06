@@ -4,3 +4,4 @@ namespace: wordpress
 resources:
   - namespace.yaml
   - repository.yaml
+  - release.yaml
