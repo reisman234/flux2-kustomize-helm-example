@@ -21,6 +21,10 @@ spec:
     wordpressPassword: abcdef123456
     resourcesPreset: none
 
+    service:
+      type: NodePort
+      externalTrafficPolicy: Local
+
     mariadb:
       auth:
         rootPassword: abcdef123456
