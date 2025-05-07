@@ -4,7 +4,6 @@ metadata:
   name: wordpress
   namespace: wordpress
 spec:
-  releaseName: wordpress
   chart:
     spec:
       chart: wordpress
@@ -12,6 +11,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
+  targetNamespace: wordpress
+  releaseName: wordpress
   interval: 50m
   install:
     remediation:
