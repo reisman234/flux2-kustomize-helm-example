@@ -18,7 +18,6 @@ spec:
     remediation:
       retries: 3
   values:
-    wordpressPassword: abcdef123456
     resourcesPreset: none
 
     service:
@@ -26,8 +25,5 @@ spec:
       externalTrafficPolicy: Local
 
     mariadb:
-      auth:
-        rootPassword: abcdef123456
-        password: abcdef123456
       primary:
         resourcesPreset: "none"
