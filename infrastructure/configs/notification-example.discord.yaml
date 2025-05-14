@@ -1,0 +1,40 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: discord
+spec:
+  providerRef:
+    name: discord
+  eventMetadata:
+    summary: Cluster addons impacted
+    env: testing
+    cluster: kind-staging
+    region: local
+  eventSeverity: info
+  eventSources:
+    - kind: GitRepository
+      name: '*'
+    - kind: Kustomization
+      name: '*'
+    - kind: HelmRelease
+      name: '*'
+    - kind: HelmRepository
+      name: '*'
+    - kind: OCIRepository
+      name: '*'
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: discord
+spec:
+  type: discord
+  secretRef:
+    name: discord-webhook
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: discord-webhook
+stringData:
+  address: https://discord.com/api/webhooks/1367021381979603016/lge0cku1NzE8g1weYMIK-Ghutvie3W6W4sPYuGLAUPRAaKcxGruAddUnKdd6szqGeUG7
